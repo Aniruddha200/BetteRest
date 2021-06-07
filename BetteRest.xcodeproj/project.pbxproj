@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C301BE98266DECB9004BD90C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C301BE97266DECB9004BD90C /* Assets.xcassets */; };
 		C32B04AE266C926B00375875 /* BetteRestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32B04AD266C926B00375875 /* BetteRestApp.swift */; };
 		C32B04B0266C926B00375875 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32B04AF266C926B00375875 /* ContentView.swift */; };
-		C32B04B2266C926F00375875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C32B04B1266C926F00375875 /* Assets.xcassets */; };
 		C32B04B5266C926F00375875 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C32B04B4266C926F00375875 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C301BE97266DECB9004BD90C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Desktop/AB200WIN/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 		C32B04AA266C926B00375875 /* BetteRest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetteRest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32B04AD266C926B00375875 /* BetteRestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetteRestApp.swift; sourceTree = "<group>"; };
 		C32B04AF266C926B00375875 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C32B04B1266C926F00375875 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C32B04B4266C926F00375875 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C32B04B6266C926F00375875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,7 +54,7 @@
 			children = (
 				C32B04AD266C926B00375875 /* BetteRestApp.swift */,
 				C32B04AF266C926B00375875 /* ContentView.swift */,
-				C32B04B1266C926F00375875 /* Assets.xcassets */,
+				C301BE97266DECB9004BD90C /* Assets.xcassets */,
 				C32B04B6266C926F00375875 /* Info.plist */,
 				C32B04B3266C926F00375875 /* Preview Content */,
 			);
@@ -127,7 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C32B04B5266C926F00375875 /* Preview Assets.xcassets in Resources */,
-				C32B04B2266C926F00375875 /* Assets.xcassets in Resources */,
+				C301BE98266DECB9004BD90C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

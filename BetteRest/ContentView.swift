@@ -8,28 +8,47 @@
 import SwiftUI
 
 struct ContentView: View {
-	@State private var date = Date()
-	@State private var number = 8.00
+	@State private var wakeUpTime = Date()
+	@State private var slpeeHour = 8.00
+	@State private var coffeNum = 0
     var body: some View {
-		return ZStack{
-			LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)),  Color(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))]), startPoint: .top, endPoint: .bottom)
-				.ignoresSafeArea(.all)
-			
-			VStack(spacing: 50){
-				Text("\(date)")
-				
-				DatePicker("", selection: $date, displayedComponents: .hourAndMinute)
-					.labelsHidden()
-				
-				Text("The number is \(number, specifier: "%.2f")")
-				
-				Stepper("", value: $number, in: 4...12, step: 0.50)
-					.labelsHidden()
-				Spacer()
-				}
+		NavigationView{
+			ZStack{
+				Form{
+					VStack{
+						Text("Wake Up Time")
+							.font(.headline)
+						
+						DatePicker("", selection: $wakeUpTime, displayedComponents: .hourAndMinute)
+							.labelsHidden()
+					}
+					
+					Spacer()
+					
+					VStack{
+						Text("The number is \(slpeeHour, specifier: "%g")")
+							.font(.headline)
+						
+						Stepper("", value: $slpeeHour, in: 4...12, step: 0.50)
+							.labelsHidden()
+					}
+					
+					Spacer()
+					
+					VStack{
+						Text("Coffe Intake \(coffeNum) cups")
+							.font(.headline)
+						
+						Stepper("", value: $coffeNum, in: 0...10)
+							.labelsHidden()
+					}
+					}
+			}
+			.navigationBarTitle("Better Rest", displayMode: .inline)
+			.navigationBarItems(trailing: Button(action: {print("Haha")}, label: {
+				Text("Calculate")
+			}))
 		}
-		
-        
     }
 }
 
