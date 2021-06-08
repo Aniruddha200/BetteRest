@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		C301BE98266DECB9004BD90C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C301BE97266DECB9004BD90C /* Assets.xcassets */; };
-		C301BE9C266E4F8C004BD90C /* BetterRest.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C301BE9B266E4F8C004BD90C /* BetterRest.mlmodel */; };
 		C32B04AE266C926B00375875 /* BetteRestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32B04AD266C926B00375875 /* BetteRestApp.swift */; };
 		C32B04B0266C926B00375875 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32B04AF266C926B00375875 /* ContentView.swift */; };
 		C32B04B5266C926F00375875 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C32B04B4266C926F00375875 /* Preview Assets.xcassets */; };
+		C3F47487266FBE960024EF12 /* BetterRest1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C3F47486266FBE960024EF12 /* BetterRest1.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C301BE97266DECB9004BD90C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Desktop/AB200WIN/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
-		C301BE9B266E4F8C004BD90C /* BetterRest.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BetterRest.mlmodel; sourceTree = "<group>"; };
 		C32B04AA266C926B00375875 /* BetteRest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetteRest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32B04AD266C926B00375875 /* BetteRestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetteRestApp.swift; sourceTree = "<group>"; };
 		C32B04AF266C926B00375875 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C32B04B4266C926F00375875 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C32B04B6266C926F00375875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3F47486266FBE960024EF12 /* BetterRest1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BetterRest1.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +54,8 @@
 		C32B04AC266C926B00375875 /* BetteRest */ = {
 			isa = PBXGroup;
 			children = (
+				C3F47486266FBE960024EF12 /* BetterRest1.mlmodel */,
 				C32B04AD266C926B00375875 /* BetteRestApp.swift */,
-				C301BE9B266E4F8C004BD90C /* BetterRest.mlmodel */,
 				C32B04AF266C926B00375875 /* ContentView.swift */,
 				C301BE97266DECB9004BD90C /* Assets.xcassets */,
 				C32B04B6266C926F00375875 /* Info.plist */,
@@ -141,8 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F47487266FBE960024EF12 /* BetterRest1.mlmodel in Sources */,
 				C32B04B0266C926B00375875 /* ContentView.swift in Sources */,
-				C301BE9C266E4F8C004BD90C /* BetterRest.mlmodel in Sources */,
 				C32B04AE266C926B00375875 /* BetteRestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
