@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+	
+	
 	@State private var wakeUpTime = Date()
 	@State private var sleepHour = 8.00
 	@State private var coffeNum = 0
@@ -21,37 +23,36 @@ struct ContentView: View {
 			NavigationView{
 				ZStack{
 					
-					Color("backGroundColor")
-						.frame(minWidth: 300, idealWidth: .infinity, maxWidth: .infinity, minHeight: 900, idealHeight: .infinity, maxHeight: .infinity, alignment: .topLeading)
-
+					RadialGradient(gradient: Gradient(colors: [Color.white, Color("backGroundColor")]), center: .topLeading, startRadius: 0, endRadius: 1600)
 					
-					List{
+					VStack{
 						
 						Spacer()
 						Section(header: Text("Sleep At")
 									.font(.headline)
 									.foregroundColor(.black)
+									.padding()
 						){
 							Text("\(sleepAt)")
 								.font(.title)
-								.offset(x:-10, y:0)
+								.offset(x:0, y:0)
 						}
-						.offset(x:130, y: -50)
+						.offset(x:0, y: -80)
 						
 						
 						Section(header: Text("Wake Up Time")
 									.font(.headline)
 									.foregroundColor(.black)
-									.offset(x: 120, y: 0)
+									.offset(x: 0, y: 10)
 						){
 							
 							
 							DatePicker("", selection: $wakeUpTime, displayedComponents: .hourAndMinute)
 								.labelsHidden()
 								.datePickerStyle(WheelDatePickerStyle())
-								.offset(x: 20)
 							
 						}
+						.offset(y: -30)
 						
 						HStack(spacing: 80){
 							
@@ -70,14 +71,15 @@ struct ContentView: View {
 							}
 						
 						
-					}
+						}
 						
 						Spacer()
 						
 					}
-					.listStyle(GroupedListStyle())
+					
 				}
 				.navigationBarTitle("Better Rest", displayMode: .inline)
+				
 			}
 		
     }
