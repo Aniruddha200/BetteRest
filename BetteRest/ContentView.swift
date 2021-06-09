@@ -21,46 +21,61 @@ struct ContentView: View {
 			NavigationView{
 				ZStack{
 					
-					Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
+					Color("backGroundColor")
 						.frame(minWidth: 300, idealWidth: .infinity, maxWidth: .infinity, minHeight: 900, idealHeight: .infinity, maxHeight: .infinity, alignment: .topLeading)
 
 					
-					VStack(spacing: 10){
+					List{
 						
 						Spacer()
-						
-						Section(header: Text("Sleep At:").font(.headline)){
+						Section(header: Text("Sleep At")
+									.font(.headline)
+									.foregroundColor(.black)
+						){
 							Text("\(sleepAt)")
 								.font(.title)
+								.offset(x:-10, y:0)
 						}
-						.offset(x:0, y: -60)
+						.offset(x:130, y: -50)
 						
 						
-						Section(header: Text("Wake Up Time:").font(.headline)){
+						Section(header: Text("Wake Up Time")
+									.font(.headline)
+									.foregroundColor(.black)
+									.offset(x: 120, y: 0)
+						){
+							
 							
 							DatePicker("", selection: $wakeUpTime, displayedComponents: .hourAndMinute)
 								.labelsHidden()
 								.datePickerStyle(WheelDatePickerStyle())
+								.offset(x: 20)
 							
 						}
 						
-						Section(header: Text("Sleep Hours: \(sleepHour, specifier: "%g")")
-									.font(.headline)){
+						HStack(spacing: 80){
 							
-							Stepper("", value: $sleepHour, in: 1...12)
-								.labelsHidden()
-						}
+							VStack{
+								Text("Coffees Intake: \(coffeNum)")
+											.font(.headline)
+								Stepper("", value: $coffeNum, in: 0...10)
+									.labelsHidden()
+							}
 						
-						Section(header: Text("Coffees Intake: \(coffeNum) cups")
-									.font(.headline)){
-							
-							Stepper("", value: $coffeNum, in: 0...10)
-								.labelsHidden()
-						}
+							VStack{
+								Text("Sleep Hours: \(sleepHour, specifier: "%g")")
+											.font(.headline)
+								Stepper("", value: $sleepHour, in: 1...12)
+									.labelsHidden()
+							}
+						
+						
+					}
 						
 						Spacer()
 						
 					}
+					.listStyle(GroupedListStyle())
 				}
 				.navigationBarTitle("Better Rest", displayMode: .inline)
 			}
