@@ -84,20 +84,17 @@ struct ContentView: View {
 		
     }
 	func tappedCaculate() -> String{
-		let model = BetterRest1()
-		let hourAndMinitue = Calendar.current.dateComponents([.hour, .minute], from: wakeUpTime)
-		let hour = hourAndMinitue.hour ?? 0
-		let minitue = hourAndMinitue.minute ?? 0
-		let time = (hour * 60 * 60) + (minitue * 60)
 		var result: String
-		var sleepTime: Date
-		var formatter: DateFormatter
-		var prediction: BetterRest1Output
 		do {
+			let hourAndMinitue = Calendar.current.dateComponents([.hour, .minute], from: wakeUpTime)
+			let hour = hourAndMinitue.hour ?? 0
+			let minitue = hourAndMinitue.minute ?? 0
+			let time = (hour * 60 * 60) + (minitue * 60)
+			let model = try BetterRest1(contentsOf: Bundle.main.url(forResource: "BetterRest1", withExtension: "mlmodel")!)
 		
-			prediction = try model.prediction(wake: Double(time), estimatedSleep: sleepHour, coffee: Double(coffeNum))
-			sleepTime = wakeUpTime - prediction.actualSleep
-			formatter = DateFormatter()
+			let prediction = try model.prediction(wake: Double(time), estimatedSleep: sleepHour, coffee: Double(coffeNum))
+			let sleepTime = wakeUpTime - prediction.actualSleep
+			let formatter = DateFormatter()
 			formatter.timeStyle = .short
 			result = formatter.string(from: sleepTime)
 		}
@@ -105,7 +102,6 @@ struct ContentView: View {
 		catch{
 			result = "Unknown"
 		}
-		
 		
 		
 		return result
